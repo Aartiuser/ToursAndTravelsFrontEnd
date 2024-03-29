@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Welcome to Bharat Tours & Travels</title>
+</head>
+<body>
+<!-- nav starts -->
+
+<nav class="navbar navbar-expand-lg ">
+    <a class="navbar-brand" href="#"><img src="images/Logo.png" id="logoimage"> Bharat Travels</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="book.html">Book</a>
+            </li>
+           <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Packages
+        </a>
+       <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="">USA</a>
+                    <a class="dropdown-item" href="">India</a>
+                    <a class="dropdown-item" href="">France</a>
+                    <a class="dropdown-item" href="">Germany</a>
+                </div>
+      </li>
+            <li class="nav-item">
+                <a class="nav-link" href="">Services</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="">Gallery</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="">About</a>
+            </li>
+        </ul>
+       <form class="form-inline my-2 my-lg-0">
+            <button class="btn btn-success my-2 my-sm-0" type="button" data-toggle="modal" data-target="#loginModal">Login</button> &nbsp
+            <button class="btn btn-success my-2 my-sm-0" type="button" data-toggle="modal" data-target="#registerModal">Register</button>
+        </form>
+    </div>
+</nav>
+<!-- nav ends -->
+
+<!-- Registration Modal -->
+<div class="modal fade" id="registerModal" tabindex="-1" role="dialog" aria-labelledby="registerModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="registerModalLabel">Register</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form id="registerForm">
+          <div class="form-group">
+            <label for="fullname">Full Name</label>
+            <input type="text" class="form-control" id="fullname" required>
+          </div>
+          <div class="form-group">
+            <label for="contact">Contact</label>
+            <input type="text" class="form-control" id="contact" required>
+          </div>
+          <div class="form-group">
+            <label for="dob">Date of Birth</label>
+            <input type="date" class="form-control" id="dob" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" class="form-control" id="email" required>
+          </div>
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" class="form-control" id="password" required>
+          </div>
+          <div class="form-group">
+            <label for="gender">Gender</label>
+            <select class="form-control" id="gender" required>
+              <option value="">Select Gender</option>
+              <option value="male">Male</option>
+              <option value="female">Female</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+          <button type="submit" class="btn btn-primary">Register</button>
+        </form>
+        <div class="mt-3">
+          <p style="color:black;">Already have an account? <a href="#" data-toggle="modal" data-target="#loginModal" data-dismiss="modal">Login here</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Login Modal -->
+<div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="loginModalLabel">Login</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form id="loginForm">
+          <div class="form-group">
+            <label for="loginEmail">Email Address</label>
+            <input type="email" class="form-control" id="loginEmail" required>
+          </div>
+          <div class="form-group">
+            <label for="loginPassword">Password</label>
+            <input type="password" class="form-control" id="loginPassword" required>
+          </div>
+          <button type="submit" class="btn btn-primary">Login</button>
+        </form>
+        <div class="mt-3">
+          <p style="color:black;">New user? <a href="#" data-toggle="modal" data-target="#registerModal" data-dismiss="modal">Register here</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- main starts -->
+<div class="jumbotron" id="main">
+    <div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <h1 class="display-4">Bharat Travels & Tourism</h1>
+            <h2>Want to Visit <span id="placeName">Singapore</span></h2>
+            <p>Welcome to Bharat Travels & Tourism, where every journey begins with adventure and ends with unforgettable memories.</p>
+            <button class="btn btn-primary">Book Now</button>
+        </div>
+        <div class="col-md-6">
+            <img src="images/Tour.png">
+        </div>
+    </div>
+</div>
+</div>
+<!-- main ends -->
+<!-- form starts -->
+<div class="container">
+    <!-- Form Section -->
+    <div class="half-width form-container">
+      <form id="bookingForm">
+        <div class="form-group">
+            <label> Where To :</label>
+            <select class="form-control" id="whereTo">
+                <option>France</option>
+                <option>India</option>
+                <option>Germany</option>
+                <option>USA</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label>How Many</label><input type="number" id="howMany" class="form-control">
+        </div>
+        <div class="form-group">
+           <label>Start Date</label> <input type="date" id="startDate" class="form-control" min="<?php echo date('Y-m-d'); ?>">
+       </div>
+       <div class="form-group">
+           <label>End Date</label> <input type="date" id="endDate" class="form-control">
+       </div>
+       <div class="form-group">
+            <label>Description</label><input type="textarea" id="desc" class="form-control">
+           </div>
+           <div class="form-group">
+            <button class="btn btn-success" type="submit">Book Now</button>
+        </div>
+        </form>
+    </div>
+    <div class="image-container form-container">
+        <img src="images/Form.jpg" alt="Example Image" id="form-img">
+    </div>
+</div>
+    <!-- form ends -->
+<!-- places starts-->
+ <div class="container mt-5" id="product">
+    <h1 id="heading"> Packages</h1>
+    <!-- first row starts -->
+    <div class="row">
+        <div class="col-md-3">
+            <div class="card">
+                <div class="card-body">
+                    <img src="images/paris.avif" class="img-fluid">
+                    <h3>France</h3>
+                    <h6>Experience the timeless allure of Paris, where romance meets artistry in every cobblestone street and ornate boulevard.</h6>
+                    <div id="star">
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                    </div>
+                    <h5>Price:  <span id="productprice"> $4000</span></h5>
+                    <button class="btn btn-primary">Book Now</button>
+                </div>
+            </div>
+         </div>
+
+     <div class="col-md-3">
+            <div class="card">
+                <div class="card-body">
+                    <img src="images/germany.jpg" class="img-fluid">
+                    <h3>Germany</h3>
+                    <h6>Explore the heart of Europe with Germany's rich tapestry of culture, history, and natural beauty. </h6>
+                    <div id="star">
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                       <i class="bi bi-star-half"></i>
+                    </div>
+                    <h5>Price:  <span id="productprice"> $8000</span></h5>
+                    <button class="btn btn-primary">Book Now</button>
+                </div>
+            </div>
+        </div>
+
+     <div class="col-md-3">
+            <div class="card">
+                <div class="card-body">
+                    <img src="images/USA.png" class="img-fluid">
+                    <h3>USA</h3>
+                    <h6>Discover the vast wonders of the United States, where each state offers a unique tapestry of landscapes, from the towering peaks of the Rockies to the sun-kissed shores of California. </h6>
+                    <div id="star">
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                    </div>
+                    <h5>Price:  <span id="productprice"> $10000</span></h5>
+            <button class="btn btn-primary">Book Now</button>
+        </div>
+       </div>
+    </div>
+</div>
+<!-- first row ends -->
+<!-- second row starts -->
+<div class="row">
+        <div class="col-md-3">
+            <div class="card">
+                <div class="card-body">
+                    <img src="images/india.jpg" class="img-fluid">
+                    <h3>India</h3>
+                    <h6>Discover the vast wonders of the United States, where each state offers a unique tapestry of landscapes, from the towering peaks of the Rockies to the sun-kissed shores of California. </h6>
+                    <div id="star">
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-half"></i>
+                    </div>
+                    <h5> Price: <span id="productprice"> $4000</span></h5>
+            <button class="btn btn-primary">Book Now</button>
+        </div>
+       </div>
+    </div>
+
+     <div class="col-md-3">
+            <div class="card">
+                <div class="card-body">
+                    <img src="images/japan.jpg" class="img-fluid">
+                    <h3>Japan</h3>
+                    <h6>Discover the vast wonders of the United States, where each state offers a unique tapestry of landscapes, from the towering peaks of the Rockies to the sun-kissed shores of California. </h6>
+                    <div id="star">
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                    </div>
+                    <h5> Price: <span id="productprice"> $8000</span></h5>
+            <button class="btn btn-primary">Book Now</button>
+        </div>
+       </div>
+    </div>
+
+     <div class="col-md-3">
+            <div class="card">
+                <div class="card-body">
+                    <img src="images/UK.jpg" class="img-fluid">
+                    <h3>UK</h3>
+                    <h6>Discover the vast wonders of the United States, where each state offers a unique tapestry of landscapes, from the towering peaks of the Rockies to the sun-kissed shores of California. </h6>
+                    <div id="star">
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                         <i class="bi bi-star-half"></i>
+                    </div>
+                    <h5>Price:  <span id="productprice"> $10000</span></h5>
+            <button class="btn btn-primary">Book Now</button>
+        </div>
+       </div>
+    </div>
+</div>
+<!-- second row ends -->
+<!-- third row starts -->
+<div class="row">
+        <div class="col-md-3">
+            <div class="card">
+                <div class="card-body">
+                    <img src="images/china.jpg" class="img-fluid">
+                    <h3>China</h3>
+                    <h6>Discover the vast wonders of the United States, where each state offers a unique tapestry of landscapes, from the towering peaks of the Rockies to the sun-kissed shores of California. </h6>
+                    <div id="star">
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                         <i class="bi bi-star-half"></i>
+                    </div>
+                    <h5>Price:  <span id="productprice"> $4000</span></h5>
+            <button class="btn btn-primary">Book Now</button>
+        </div>
+       </div>
+    </div>
+
+     <div class="col-md-3">
+            <div class="card">
+                <div class="card-body">
+                    <img src="images/Maldives.jpg" class="img-fluid">
+                    <h3>Maldives</h3>
+                    <h6>Discover the vast wonders of the United States, where each state offers a unique tapestry of landscapes, from the towering peaks of the Rockies to the sun-kissed shores of California. </h6>
+                    <div id="star">
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                    </div>
+                    <h5> Price: <span id="productprice"> $8000</span></h5>
+            <button class="btn btn-primary">Book Now</button>
+        </div>
+       </div>
+    </div>
+
+     <div class="col-md-3">
+            <div class="card">
+                <div class="card-body">
+                    <img src="images/Aus.jpg" class="img-fluid">
+                    <h3>Australia</h3>
+                    <h6>Discover the vast wonders of the United States, where each state offers a unique tapestry of landscapes, from the towering peaks of the Rockies to the sun-kissed shores of California. </h6>
+                    <div id="star">
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                         <i class="bi bi-star-half"></i>
+                    </div>
+                    <h5>Price:  <span id="productprice"> $10000</span></h5>
+            <button class="btn btn-primary">Book Now</button>
+        </div>
+       </div>
+    </div>
+</div>
+</div>
+<!-- third row ends -->
+<!-- places ends -->
+<!-- JS part starts -->
+
+
+<script>
+
+ // Registration form validation
+  document.getElementById('registerForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+    var fullname = document.getElementById('fullname').value.trim();
+    var contact = document.getElementById('contact').value.trim();
+    var dob = document.getElementById('dob').value.trim();
+    var email = document.getElementById('email').value.trim();
+    var password = document.getElementById('password').value.trim();
+    var gender = document.getElementById('gender').value.trim();
+
+    if (!fullname || !contact || !dob || !email || !password || !gender) {
+      alert("Please fill in all fields.");
+      return;
+    }
+
+    // Additional validation logic can be added here
+
+    // If all fields are filled, you can proceed with form submission
+    alert("Registration successful!");
+    document.getElementById("registerForm").reset();
+  });
+
+  // Login form validation
+  document.getElementById('loginForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+    var email = document.getElementById('loginEmail').value.trim();
+    var password = document.getElementById('loginPassword').value.trim();
+
+    if (!email || !password) {
+      alert("Please fill in all fields.");
+      return;
+    }
+
+    // Additional validation logic can be added here
+
+    // If all fields are filled, you can proceed with form submission
+    alert("Login successful!");
+    document.getElementById("loginForm").reset();
+  });
+
+    
+    document.addEventListener('DOMContentLoaded', function () {
+        const placeNames = ["India", "Germany", "USA", "France", "Japan", "Russia"];
+        const placeNameElement = document.getElementById('placeName');
+        let currentIndex = 0;
+
+        function changePlaceName() {
+            placeNameElement.textContent = placeNames[currentIndex];
+            currentIndex = (currentIndex + 1) % placeNames.length;
+        }
+
+        setInterval(changePlaceName, 200);
+    });
+
+
+    document.getElementById('bookingForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+        var whereTo = document.getElementById('whereTo').value;
+        var howMany = document.getElementById('howMany').value;
+        var startDate = document.getElementById('startDate').value;
+        var endDate = document.getElementById('endDate').value;
+        var description = document.getElementById('desc').value;
+        
+        if (whereTo && howMany && startDate && endDate && description) {
+            alert("Booking successful!");
+           document.getElementById("bookingForm").reset();
+            // Here you can add code to submit the form data to server or perform further actions
+        } else {
+            alert("Please fill in all the fields.");
+        }
+    });
+</script>
+</body>
+</html>
